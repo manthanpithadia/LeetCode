@@ -1,6 +1,5 @@
 import java.util.Stack
 
-class Solution {
     fun isValid(s: String): Boolean {
         val stack = Stack<Char>()
         val map = hashMapOf('(' to ')', '[' to ']', '{' to '}')
@@ -18,4 +17,4 @@ class Solution {
         
         return stack.isEmpty()  // True if all brackets are matched
     }
-}
+

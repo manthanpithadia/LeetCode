@@ -1,4 +1,4 @@
-class Solution {
+
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = HashMap<Int,Int>()
     
@@ -11,4 +11,3 @@ class Solution {
         } 
         return intArrayOf()
     }
-}

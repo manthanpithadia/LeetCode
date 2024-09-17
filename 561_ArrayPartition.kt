@@ -1,4 +1,4 @@
-class Solution {
+
     fun arrayPairSum(nums: IntArray): Int {
         nums.sort()
         var sum = 0
@@ -7,4 +7,3 @@ class Solution {
         }
         return sum
     }
-}

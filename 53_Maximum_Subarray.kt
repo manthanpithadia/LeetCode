@@ -1,5 +1,6 @@
-class Solution {
-    fun maxSubArray(nums: IntArray): Int {
+import kotlin.math.max
+
+fun maxSubArray(nums: IntArray): Int {
         var maxSum = nums[0]
         var currentSum = nums[0]
 
@@ -10,4 +11,3 @@ class Solution {
         }
         return maxSum
     }
-}

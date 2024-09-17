@@ -1,4 +1,4 @@
-class Solution {
+
     fun reverse(x: Int): Int {
         var num = x
         var reversed = 0
@@ -15,4 +15,3 @@ class Solution {
         }
         return reversed
     }
-}
