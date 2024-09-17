@@ -10,9 +10,9 @@ fun findingDuplicates(){
     var h = 0
     var x = 0
 
-    for((index,it) in array.withIndex()){
+    for(it in array){
         x = 1
-        x = x shl (array[index].code -97) // shl: shifting left by array[index] ASCII - 97 bits
+        x = x shl (it.code -97) // shl: shifting left by array[index] ASCII - 97 bits
         // Now performing masking operation
         if(x and h > 0){    // Masking - to check if bits are on in h or not by comparing x
             println(it)
