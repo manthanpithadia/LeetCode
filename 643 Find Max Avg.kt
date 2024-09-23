@@ -12,7 +12,7 @@ fun findMaxAverage(nums: IntArray, k: Int): Double {
         currentWindow += nums[i]
     }
     maxSum = currentWindow
-    for(j in k..nums.size-1){
+    for(j in k..<nums.size){
         currentWindow = currentWindow + nums[j] - nums[j-k]
         maxSum = max(currentWindow, maxSum)
     }
