@@ -7,8 +7,7 @@ fun main() {
     list.addNode(6)
     list.addNode(2)
     list.addNode(3)
-    list.reverseList()
-    list.displayNodes()
+    list.tail?.next = list.head
 }
 
 data class Node(
@@ -105,6 +104,7 @@ internal class LinkedList(): ILinkedList{
         }
         head = prev
     }
+
 }
 
 interface ILinkedList{
