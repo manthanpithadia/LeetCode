@@ -7,6 +7,7 @@ fun main() {
     list.addNodeDoubly(6)
     list.addNodeDoubly(2)
     list.addNodeDoubly(3)
+    list.reverseDoublyList()
     list.display()
 }
 
@@ -22,6 +23,7 @@ interface IDoublyLinkedList{
     fun addNodeDoubly(value:Int)
     fun deleteNodeDoubly(value: Int)
     fun display()
+    fun reverseDoublyList()
 }
 
 class DoublyLinkedList: IDoublyLinkedList{
@@ -78,6 +80,24 @@ class DoublyLinkedList: IDoublyLinkedList{
             else{
                 print(".")
             }
+        }
+    }
+
+    override fun reverseDoublyList() {
+        var current = head
+        var tempPrev: DNode? = null
+
+        tail = head
+
+        while (current!=null){
+            tempPrev = current.prev
+            current.prev = current.next
+            current.next = tempPrev
+            current = current.prev
+        }
+
+        if(tempPrev!=null){
+            head = tempPrev.prev
         }
     }
 
