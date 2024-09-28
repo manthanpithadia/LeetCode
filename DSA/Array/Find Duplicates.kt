@@ -1,4 +1,4 @@
-package Algorithms.Array
+package DSA.Array
 
 fun main() {
     findingDuplicates()

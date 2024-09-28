@@ -1,4 +1,4 @@
-package Algorithms.Array
+package DSA.Array
 
 import kotlin.math.max
 

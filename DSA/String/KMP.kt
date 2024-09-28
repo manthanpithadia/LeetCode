@@ -1,4 +1,4 @@
-package Algorithms.String
+package DSA.String
 
 fun main() {
   kmp("ababcabcabababd", "ababd")
