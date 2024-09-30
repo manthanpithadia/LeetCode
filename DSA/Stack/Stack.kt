@@ -9,6 +9,7 @@ fun main() {
     stack.traverse()
     println( stack.peek())
     stack.pop()
+
 }
 
 class Stack<T>(private val size: Int): IStack<T>{
