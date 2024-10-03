@@ -17,7 +17,7 @@ fun main() {
 class FixedSizeQueue(private val capacity: Int) {
     val queue = IntArray(capacity)
     var front = 0
-    var rear = -1
+    var rear = 0
     var size = 0
 
     fun enQueue(value: Int) {
@@ -25,7 +25,6 @@ class FixedSizeQueue(private val capacity: Int) {
             println("Queue is full. Cannot add $value")
             return
         }
-        rear = (rear + 1) % capacity  // Increment rear circularly
         queue[rear] = value
         size++
         println("Added $value to the queue.")
@@ -33,7 +32,7 @@ class FixedSizeQueue(private val capacity: Int) {
 
     // Remove an element from the queue
     fun deQueue(): Int? {
-        if (size == 0) {
+        if (front==rear) {
             println("Queue is empty. Cannot remove element.")
             return null
         }
