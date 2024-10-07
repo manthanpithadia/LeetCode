@@ -1,15 +1,15 @@
 fun main() {
-    println(gcdOfStrings("ABCDEF","ABC"))
+    println(gcdOfStrings("ABCABC","ABC"))
 }
 
 fun gcdOfStrings(str1: String, str2: String): String {
-    var dict = IntArray(size = 26)
-    var result = ""
-    for((i,c) in str2.withIndex()){
-        if(str1[i]==str2[i] && dict[c-'A']==0){
-            dict[c-'A']++
-            result+=c
-        }
-   }
-    return result
+    if(str1 + str2 != str2 + str1) return ""
+
+    val gcd = gcd(str1.length, str2.length)
+
+    return str1.substring(0,gcd)
+}
+
+fun gcd(a : Int, b : Int) : Int{
+    return if(b==0) a else gcd(b, a % b)
 }
